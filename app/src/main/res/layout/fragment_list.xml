@@ -9,6 +9,8 @@
         android:id="@+id/fr_list_rv_users"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/gray"
+
         android:visibility="visible" />
 
 </FrameLayout>

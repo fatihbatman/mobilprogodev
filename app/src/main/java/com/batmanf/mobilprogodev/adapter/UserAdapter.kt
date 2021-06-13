@@ -46,8 +46,8 @@ class UserAdapter: RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         val users = differ.currentList[position]
         holder.itemView.apply {
-            val image = users.avatar
-            //Glide.with(context).load(image).into(imageViewAvatar)
+            val image = "https://www.w3schools.com/w3css/img_avatar3.png"
+
             Glide.with(context)
                 .load(image)
                 .apply {

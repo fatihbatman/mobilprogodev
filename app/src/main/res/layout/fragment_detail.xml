@@ -38,7 +38,7 @@
             android:hint="Id"
             android:paddingTop="30dp"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/teal_200"
             tools:text="Id" />
 
         <TextView
@@ -48,7 +48,7 @@
             android:hint="Name"
             android:paddingTop="30dp"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/teal_200"
             tools:text="Name" />
 
         <TextView
@@ -58,7 +58,7 @@
             android:hint="Email"
             android:paddingTop="30dp"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/teal_200"
             tools:text="Email" />
 
     </LinearLayout>

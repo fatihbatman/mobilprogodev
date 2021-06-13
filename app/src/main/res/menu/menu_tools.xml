@@ -2,5 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
     android:id="@+id/ac_menu_hakkinda"
-        android:title="HAKKINDA"/>
+
+        android:title="Hakkında"/>
 </menu>

@@ -9,9 +9,7 @@ class AboutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about)
-
         setSupportActionBar(ac_toolbar)
-
         supportActionBar?.apply {
             title = "Hakkında"
             setDisplayHomeAsUpEnabled(true)

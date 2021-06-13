@@ -29,21 +29,16 @@ class ListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_list, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as MainActivity).mainViewModel
-
         rvUsers = view.findViewById(R.id.fr_list_rv_users)
         setupRecyclerView()
-
         navController = Navigation.findNavController(requireActivity(), R.id.ac_ma_nav_host_fragment)
-
         rvUsers = view.findViewById(R.id.fr_list_rv_users)
-
         viewModel.userRes.observe(viewLifecycleOwner, Observer { response ->
             when (response) {
                 is Resource.Loading -> {
@@ -60,11 +55,9 @@ class ListFragment : Fragment() {
                     (requireActivity() as MainActivity).hideLoading()
                     response.data?.let { userResponse ->
                         if (userResponse != null) {
-                            // Veriler adapter içine set edilir.
                                 val userList = userResponse.toList()
                             userAdapter.differ.submitList(userList)
                         } else {
-                            // Data gelmedi ekranı göster
                         }
                     }
                 }
@@ -72,7 +65,6 @@ class ListFragment : Fragment() {
             response.data = null
             response.message = null
         })
-
         userAdapter.setUserItemClickListener {
             val bundle = Bundle().apply {
                 Log.i("DetailItem", it.toString())
@@ -84,7 +76,6 @@ class ListFragment : Fragment() {
             )
         }
     }
-
     private fun setupRecyclerView() {
         userAdapter = UserAdapter()
         rvUsers.apply {

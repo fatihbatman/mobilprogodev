@@ -11,14 +11,12 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-
         if (UiHelper.hasInternetConnection(this)) {
             loadSplashScreen()
         } else {
             UiHelper.customErrorDialog(this, "Connection failed")
         }
     }
-
     private fun loadSplashScreen() {
         Handler().postDelayed({
             startActivity(Intent(this, MainActivity::class.java))

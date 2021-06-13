@@ -30,21 +30,17 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(ac_toolbar)
         navController = Navigation.findNavController(this, R.id.ac_ma_nav_host_fragment)
         NavigationUI.setupActionBarWithNavController(this, navController)
-
         val mainRepository = MainRepository()
         val viewModelProviderFactory = MainViewModelProviderFactory(application, mainRepository)
         mainViewModel = ViewModelProvider(this, viewModelProviderFactory).get(MainViewModel::class.java)
-
     }
 
     override fun onSupportNavigateUp(): Boolean {
         return Navigation.findNavController(this, R.id.ac_ma_nav_host_fragment).navigateUp() || super.onSupportNavigateUp()
     }
-
     fun showLoading(){
         window.setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE, WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE)
     }
-
     fun hideLoading(){
         window.clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE)
     }
@@ -52,7 +48,6 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.menu_tools, menu)
         return true
     }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.ac_menu_hakkinda -> {

@@ -42,7 +42,6 @@ class DetailFragment : Fragment() {
             name = "Fatih Batman"
             email = "batmanf@gmail.com"
         }
-
         Glide.with(requireContext()).load(avatar).into(frDetailImageViewProfilePicture)
         frDetailTextViewId.text = id
         frDetailTextViewName.text = name

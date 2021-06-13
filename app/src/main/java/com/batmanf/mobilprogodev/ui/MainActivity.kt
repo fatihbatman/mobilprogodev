@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        setSupportActionBar(ac_ma_toolbar)
         this.window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         navController = Navigation.findNavController(this, R.id.ac_ma_nav_host_fragment)
@@ -39,11 +38,9 @@ class MainActivity : AppCompatActivity() {
 
     fun showLoading(){
         window.setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE, WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE)
-        ac_main_pb.visibility = View.VISIBLE
     }
 
     fun hideLoading(){
         window.clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE)
-        ac_main_pb.visibility = View.GONE
     }
 }

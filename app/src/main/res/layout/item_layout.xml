@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/imageViewAvatar"
         android:layout_width="61dp"
-        android:layout_height="101dp"
+        android:layout_height="100dp"
         android:padding="4dp"
 
         app:layout_constraintStart_toStartOf="parent"
